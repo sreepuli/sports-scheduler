@@ -88,76 +88,7 @@ sportsScheduler/
     └── .env.example
 ```
 
-## 🚀 Getting Started
 
-### Prerequisites
-
-- Node.js (v16 or higher)
-- PostgreSQL (v12 or higher)
-- npm or yarn
-
-### 1. Clone the Repository
-
-```bash
-git clone <your-repo-url>
-cd sportsScheduler
-```
-
-### 2. Backend Setup
-
-```bash
-# Navigate to backend directory
-cd backend
-
-# Install dependencies
-npm install
-
-# Create .env file
-cp .env.example .env
-
-# Edit .env with your database credentials
-# DB_HOST=localhost
-# DB_PORT=5432
-# DB_NAME=sports_scheduler
-# DB_USER=your_postgres_username
-# DB_PASSWORD=your_postgres_password
-# JWT_SECRET=your-super-secret-jwt-key
-# PORT=5000
-
-# Create PostgreSQL database
-psql -U postgres
-CREATE DATABASE sports_scheduler;
-\q
-
-# Start the backend server
-npm run dev
-```
-
-The backend will run on `http://localhost:5000`
-
-### 3. Frontend Setup
-
-```bash
-# Open a new terminal and navigate to frontend directory
-cd frontend
-
-# Install dependencies
-npm install
-
-# Install Tailwind CSS
-npm install -D tailwindcss postcss autoprefixer
-
-# Create .env file
-cp .env.example .env
-
-# Edit .env with your backend URL
-# VITE_API_URL=http://localhost:5000
-
-# Start the frontend development server
-npm run dev
-```
-
-The frontend will run on `http://localhost:5173`
 
 ## 📡 API Endpoints
 
@@ -255,21 +186,6 @@ The frontend will run on `http://localhost:5173`
 5. Select date range and generate reports
 6. View session statistics and popular sports
 7. Export reports as JSON or CSV
-
-## 🚢 Deployment
-
-### Backend (Render/Railway/Heroku)
-
-1. Create PostgreSQL database addon
-2. Set environment variables (DB credentials, JWT_SECRET)
-3. Deploy backend
-4. Note down the deployed URL
-
-### Frontend (Vercel/Netlify)
-
-1. Set `VITE_API_URL` to your backend URL
-2. Deploy frontend
-3. Access your app!
 
 ## 🔮 Future Enhancements
 
