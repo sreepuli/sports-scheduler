@@ -101,7 +101,7 @@ npm run dev
 
 ## 🎥 Demo Video
 
-👉 **Watch the demo on YouTube:** [Sports Scheduler Demo](https://youtu.be/YOUR_VIDEO_ID)
+👉 **Watch the demo on YouTube:** [Sports Scheduler Demo](https://youtu.be/B_Y8QCP067Y)
 
 ---
 
