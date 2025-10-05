@@ -280,7 +280,7 @@ const Dashboard = () => {
               {isAdmin() && (
                 <Link
                   to="/reports"
-                  className="flex items-center space-x-2 bg-purple-600 text-white px-5 py-2.5 rounded-lg hover:opacity-90 transition-all font-medium"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-600 text-white px-5 py-2.5 rounded-lg hover:from-orange-600 hover:to-red-700 transition-all font-medium shadow-md"
                 >
                   <svg
                     className="w-5 h-5"
@@ -575,7 +575,7 @@ const Dashboard = () => {
                                 />
                                 <button
                                   onClick={() => handleEditSport(sport.id)}
-                                  className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 font-medium"
+                                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-lg hover:from-orange-600 hover:to-red-700 font-medium shadow-md transition-all"
                                 >
                                   Save
                                 </button>
@@ -613,7 +613,7 @@ const Dashboard = () => {
                                       setEditSportName(sport.name);
                                       setSportError("");
                                     }}
-                                    className="text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"
+                                    className="text-orange-600 hover:bg-orange-50 px-3 py-2 rounded-lg transition-colors"
                                     title="Edit sport"
                                   >
                                     <svg
@@ -910,10 +910,10 @@ const Dashboard = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Link
                     to="/sessions"
-                    className="border-2 border-green-200 bg-green-50 p-6 rounded-xl hover:border-green-300 transition-colors group"
+                    className="border-2 border-orange-200 bg-orange-50 p-6 rounded-xl hover:border-orange-300 transition-colors group"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                         <svg
                           className="w-7 h-7 text-white"
                           fill="none"
@@ -941,10 +941,10 @@ const Dashboard = () => {
 
                   <Link
                     to="/sessions"
-                    className="border-2 border-blue-200 bg-blue-50 p-6 rounded-xl hover:border-blue-300 transition-colors group"
+                    className="border-2 border-orange-200 bg-orange-50 p-6 rounded-xl hover:border-orange-300 transition-colors group"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                         <svg
                           className="w-7 h-7 text-white"
                           fill="none"
@@ -1040,7 +1040,7 @@ const Dashboard = () => {
               </div>
 
               {/* User Role Info */}
-              <div className="bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-6 text-white shadow-lg">
                 <div className="flex items-center space-x-3 mb-3">
                   <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
                     <svg

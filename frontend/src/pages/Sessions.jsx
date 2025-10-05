@@ -127,7 +127,7 @@ const Sessions = () => {
         <div className="mb-6">
           <button
             onClick={() => setShowCreateForm(!showCreateForm)}
-            className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 font-semibold"
+            className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-lg hover:from-orange-600 hover:to-red-700 font-semibold shadow-md transition-all"
           >
             {showCreateForm ? "Cancel" : "Create New Session"}
           </button>
@@ -148,7 +148,7 @@ const Sessions = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, sportId: e.target.value })
                     }
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
                   >
                     <option value="">Select a sport</option>
                     {sports.map((sport) => (
@@ -169,7 +169,7 @@ const Sessions = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, date: e.target.value })
                     }
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                 </div>
 
@@ -184,7 +184,7 @@ const Sessions = () => {
                       setFormData({ ...formData, venue: e.target.value })
                     }
                     placeholder="Enter venue location"
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                 </div>
               </div>
@@ -195,7 +195,7 @@ const Sessions = () => {
 
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
+                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-2 rounded hover:from-orange-600 hover:to-red-700 shadow-md transition-all"
               >
                 Create Session
               </button>
@@ -248,17 +248,17 @@ const Sessions = () => {
 
                   <div className="border-t pt-4">
                     {isUserCreator(session) ? (
-                      <div className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm text-center">
+                      <div className="bg-orange-100 text-orange-800 px-3 py-2 rounded text-sm text-center font-semibold">
                         You created this session
                       </div>
                     ) : isUserJoined(session) ? (
-                      <div className="bg-green-100 text-green-800 px-3 py-2 rounded text-sm text-center">
+                      <div className="bg-green-100 text-green-800 px-3 py-2 rounded text-sm text-center font-semibold">
                         ✓ You've joined this session
                       </div>
                     ) : (
                       <button
                         onClick={() => handleJoinSession(session.id)}
-                        className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+                        className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded hover:from-orange-600 hover:to-red-700 shadow-md transition-all font-semibold"
                       >
                         Join Session
                       </button>

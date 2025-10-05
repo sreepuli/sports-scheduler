@@ -109,7 +109,7 @@ const Reports = () => {
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -121,7 +121,7 @@ const Reports = () => {
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -129,7 +129,7 @@ const Reports = () => {
               <button
                 onClick={handleGenerateReports}
                 disabled={loading}
-                className="w-full bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-2 rounded hover:from-orange-600 hover:to-red-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-md transition-all font-semibold"
               >
                 {loading ? "Generating..." : "Generate Reports"}
               </button>
@@ -146,22 +146,22 @@ const Reports = () => {
                 Session Statistics
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
                   <p className="text-sm text-gray-600 mb-1">Date Range</p>
                   <p className="text-lg font-semibold text-gray-800">
                     {formatDate(sessionReport.startDate)} -{" "}
                     {formatDate(sessionReport.endDate)}
                   </p>
                 </div>
-                <div className="bg-green-50 p-4 rounded-lg">
+                <div className="bg-orange-100 p-4 rounded-lg border border-orange-300">
                   <p className="text-sm text-gray-600 mb-1">Total Sessions</p>
-                  <p className="text-3xl font-bold text-green-600">
+                  <p className="text-3xl font-bold text-orange-600">
                     {sessionReport.sessionCount}
                   </p>
                 </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
+                <div className="bg-red-50 p-4 rounded-lg border border-red-200">
                   <p className="text-sm text-gray-600 mb-1">Average per Day</p>
-                  <p className="text-3xl font-bold text-purple-600">
+                  <p className="text-3xl font-bold text-red-600">
                     {(() => {
                       const days = Math.ceil(
                         (new Date(sessionReport.endDate) -
@@ -191,7 +191,7 @@ const Reports = () => {
                 <div className="space-y-4">
                   {popularSports.map((item, index) => (
                     <div key={item.sport.id} className="flex items-center">
-                      <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold mr-4">
+                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
                         {index + 1}
                       </div>
                       <div className="flex-1">
@@ -206,7 +206,7 @@ const Reports = () => {
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
                           <div
-                            className="bg-blue-500 h-2 rounded-full transition-all"
+                            className="bg-gradient-to-r from-orange-500 to-red-600 h-2 rounded-full transition-all"
                             style={{
                               width: `${
                                 (item.sessionCount /
@@ -248,7 +248,7 @@ const Reports = () => {
                     link.download = `sports-report-${startDate}-to-${endDate}.json`;
                     link.click();
                   }}
-                  className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
+                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-2 rounded hover:from-orange-600 hover:to-red-700 shadow-md transition-all font-semibold"
                 >
                   Export as JSON
                 </button>
@@ -273,7 +273,7 @@ const Reports = () => {
                     link.download = `popular-sports-${startDate}-to-${endDate}.csv`;
                     link.click();
                   }}
-                  className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
+                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-2 rounded hover:from-orange-600 hover:to-red-700 shadow-md transition-all font-semibold"
                 >
                   Export as CSV
                 </button>
