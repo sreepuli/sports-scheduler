@@ -85,7 +85,7 @@ npm run dev
 
 ## 📸 Screenshots
 
-### 🔐 Authentication Pages
+### 🔐 Landing Pages
 
 ![Landing Page](screenshots/landing-page.png)
 
